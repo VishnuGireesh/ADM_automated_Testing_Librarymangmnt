@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2020 at 07:01 PM
+-- Generation Time: Apr 27, 2020 at 10:21 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -41,7 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `uname`, `pass`, `email`) VALUES
-(1, 'abc', 'def', 'abc', 'def@gmail.com');
+(1, 'vishnu', 'admin', 'admin', 'def@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -69,13 +69,8 @@ CREATE TABLE `books` (
 INSERT INTO `books` (`id`, `name`, `author`, `publication`, `p_date`, `price`, `qty`, `a_qty`, `adm_name`, `image`) VALUES
 (8, 'The Lost Symbol', 'Dan Brown ', 'Doubleday', '2019-10-01', 125, 125, 125, 'def', '1.jpg'),
 (9, 'Animal Farm', 'George Orwell', ' NAL ', '2019-10-03', 255, 78, 78, 'def', '2.jpg'),
-(10, 'Unstoppable', 'Tim Green ', ' HarperCollins', '2019-10-11', 25, 123, 2, 'def', '3.jpg'),
-(11, 'The Alchemist', ' Paulo Coelho', 'HarperCollins', '2019-10-18', 1000, 500, 504, 'def', '4.jpg'),
-(12, 'Saving Fish from Drowning', 'Amy Tan ', 'Ballantine Books', '2019-09-05', 124, 50, 51, 'def', '5.jpg'),
-(14, 'w', 'w', 'w', '2020-04-04', 25, 12, 78, '', '1.jpg'),
-(15, 'q', 'a', 'a', '2020-04-11', 4, 2, 7, '', '5.JPG'),
-(16, 'w', 'w', 'w', '2020-04-03', 2, 4, 7, '', 'WIN_20180226_15_41_04_Pro.jpg'),
-(17, 'q', 'w', 'w', '2020-04-12', 23, 45, 100, '', 'WIN_20180226_15_41_36_Pro.jpg');
+(10, 'Unstoppable', 'Tim Green ', ' HarperCollins', '2019-10-11', 25, 123, 123, 'def', '3.jpg'),
+(11, 'The Alchemist', ' Paulo Coelho', 'HarperCollins', '2019-10-18', 1000, 500, 500, 'def', '4.jpg');
 
 -- --------------------------------------------------------
 
@@ -96,18 +91,6 @@ CREATE TABLE `issue_books` (
   `s_uname` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `issue_books`
---
-
-INSERT INTO `issue_books` (`id`, `s_eno`, `s_name`, `s_sem`, `s_contact`, `s_email`, `b_name`, `b_issue_date`, `b_return_date`, `s_uname`) VALUES
-(10, 456, 'sudheesh G', 3, '974-612-7107', 'vishnugireesh310630@gmail.com', 'sudheesh G', '2019-11-04', '2019-11-04', 're'),
-(15, 123, 'mrx', 4, '7878787474', 'mrx@gmail.com', 'Saving Fish from Drowning', '2020-04-26', '0000-00-00', 'mrx'),
-(16, 123, 'mrx', 4, '7878787474', 'mrx@gmail.com', 'Unstoppable', '2020-04-26', '0000-00-00', 'mrx'),
-(17, 12, 'vishnu', 5, '22333', 'qww@gmail.com', 'Saving Fish from Drowning', '2020-04-26', '2020-04-26', 'we'),
-(18, 12, 'vishnu', 5, '22333', 'qww@gmail.com', 'Animal Farm', '2020-04-26', '0000-00-00', 'we'),
-(19, 123, 'mrx', 4, '7878787474', 'mrx@gmail.com', 'The Alchemist', '2020-04-26', '2020-04-26', 'mrx');
-
 -- --------------------------------------------------------
 
 --
@@ -122,15 +105,6 @@ CREATE TABLE `messages` (
   `msg` varchar(500) NOT NULL,
   `read1` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `messages`
---
-
-INSERT INTO `messages` (`id`, `susername`, `dusername`, `title`, `msg`, `read1`) VALUES
-(1, '', 'sankar', 'dd', 'ddddddd', 'y'),
-(5, 'def', 'student', 'aa', 'aaaa', 'n'),
-(6, 'def', 'sankar', 'tt', 'tttt', 'y');
 
 -- --------------------------------------------------------
 
@@ -155,10 +129,8 @@ CREATE TABLE `studreg` (
 --
 
 INSERT INTO `studreg` (`id`, `name`, `uname`, `pass`, `email`, `phone`, `sem`, `eno`, `status`) VALUES
-(4, 'Manu', 'student', 'student', 'manu@gmail.com', '123-456-7896', 2, 123, 'yes'),
-(5, 'Sankar', 'sankar', 'sankar', 'sankar123aaaaaaaa@gmail.com', '456-789-5285', 4, 456, 'yes'),
-(6, 'vishnu', 'we', '12', 'qww@gmail.com', '22333', 5, 12, 'no'),
-(7, 'mrx', 'mrx', 'mrx', 'mrx@gmail.com', '7878787474', 4, 123, 'yes');
+(4, 'Manu', 'manu', 'manu', 'manu@gmail.com', '123-456-7896', 2, 123, 'yes'),
+(5, 'Sankar', 'sankar', 'sankar', 'sankar123aaaaaaaa@gmail.com', '456-789-5285', 4, 456, 'yes');
 
 --
 -- Indexes for dumped tables

@@ -1,8 +1,19 @@
 <?php
-session_start();
 include "connection.php";
-$b_name=$_GET["bname"];
 include "headder.php";
+if(!(isset($_SESSION['admin'])))
+{
+
+    ?>
+        <script>
+            window.location="adminlogin.php";
+        </script>
+
+    <?php
+}
+
+$b_name=$_GET["bname"];
+
 ?>
 
         <!-- page content area main -->
